@@ -2,4 +2,4 @@
 # via `site.*`. So for example, {{ site.title }} can be used
 # in a template to get the contents of the `title` key.
 title: Midwest PHP 2015
-#subtitle: To Get You Started
+url: http://localhost:8000

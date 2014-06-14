@@ -6,3 +6,8 @@
 /output_*/
 /source/components/
 s3.conf
+
+# Additional ignores
+
+# PhpStorm settings
+.idea/

@@ -11,3 +11,9 @@ s3.conf
 
 # PhpStorm settings
 .idea/
+
+# SASS Cache files
+.sass-cache/
+
+# Theme-generated stylesheets
+**/themes/**/assets/**/*.css

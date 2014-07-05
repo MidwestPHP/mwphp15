@@ -1,0 +1,18 @@
+@import '../settings';
+
+.wrapper {}
+
+.inner-wrapper {
+  display: block;
+  margin: 0 auto;
+  max-width: $width-max-outer;
+  width: 90%;
+}
+
+.main-content {
+  background: $color-background-lightest;
+  clear: both;
+  margin: $header-total-height auto 2em auto;
+  min-height: 400px;
+  padding: 4em 0 2em 0;
+}

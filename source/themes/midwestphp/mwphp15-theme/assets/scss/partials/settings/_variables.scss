@@ -1,0 +1,41 @@
+/*--------||
+|| Colors ||
+||--------*/
+// Background colors
+$color-background-primary-dark: rgb(27,117,187);
+$color-background-primary-light: rgb(0,176,216);
+$color-background-lightest: rgb(255,255,255);
+
+// Grays
+$color-gray-dark: rgb(110,110,110);
+$color-gray-medium: rgb(180,180,180);
+$color-gray-light: rgb(220,220,220);
+$color-gray-lightest: rgb(245,245,245);
+$color-gray-lightest-transluscent: rgba(245,245,245,0.9);
+
+/*-------||
+|| Text  ||
+||-------*/
+// Font sizes
+$size-font-base: 1em;
+
+// Font families
+$sans: Lato, Helvetica, Arial, sans-serif;
+$serif: serif;
+
+// Text colors
+$color-text-dark: rgb(29,29,29);
+$color-text-light: rgb(245,245,245);
+
+// Links
+$color-links-dark: $color-background-primary-dark;
+
+// Maximum widths
+$width-max-outer: 75em; // 1200px equivalent at 1em base
+
+/*---------||
+|| Layouts ||
+||---------*/
+$height-header: 6.25em;
+$height-header-border: 2.5em;
+$header-total-height: $height-header + $height-header-border;

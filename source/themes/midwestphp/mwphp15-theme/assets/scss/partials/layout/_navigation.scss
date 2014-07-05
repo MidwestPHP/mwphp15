@@ -1,0 +1,92 @@
+@import '../settings';
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes glow {
+  50% {
+    background-color: $color-background-primary-light;
+  }
+}
+
+/* Standard syntax */
+@keyframes glow {
+  50% {
+    background-color: $color-background-primary-light;
+  }
+}
+
+.masthead:hover .navbar {
+  box-shadow: 0 3px 0 3px $color-background-primary-dark;
+  @include transition(box-shadow 300ms ease-in);
+
+  .primary-nav {
+    li.register {
+      -webkit-animation: glow 3s linear; /* Chrome, Safari, Opera */
+      animation: glow 3s linear;
+      -webkit-animation-iteration-count: infinite;
+      animation-iteration-count: infinite;
+    }
+  }
+}
+.navbar {
+  background: $color-gray-lightest;
+  background: $color-gray-lightest-transluscent;
+  box-shadow: 0 3px 0 3px rgba(210,210,210,0.8);
+  @include transition(box-shadow 300ms ease-out);
+  display: block;
+  margin-right: 1em;
+  overflow: hidden;
+  width: 100%;
+
+  a {
+    color: $color-links-dark;
+    display: block;
+    font-size: 1em;
+    font-weight: 400;
+    letter-spacing: 0.03em;
+    text-decoration: none;
+  }
+
+  .primary-nav {
+    display: table;
+    float: right;
+    height: $height-header;
+    margin-left: 10em;
+    table-layout: fixed;
+    vertical-align: baseline;
+
+    ul {
+      display: table-cell;
+      list-style-type: none;
+      padding-bottom: 1em;
+      position: relative;
+      vertical-align: bottom;
+      width: auto;
+
+    }
+
+    li {
+      background-color: inherit;
+      display: inline-block;
+      padding: 0.5em;
+
+      &.register {
+        background: $color-background-primary-dark;
+        @include transition(background-color 150ms ease-in, color 150ms ease-in);
+        text-transform: uppercase;
+
+        a {
+          color: $color-text-light;
+        }
+      }
+
+      &:hover {
+        background: $color-background-primary-dark;
+        @include transition(background-color 150ms ease-in, color 150ms ease-in);
+
+        a {
+          color: $color-text-light;
+        }
+      }
+    }
+  }
+}

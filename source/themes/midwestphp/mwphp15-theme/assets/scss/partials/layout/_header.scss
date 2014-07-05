@@ -1,0 +1,32 @@
+@import '../settings';
+
+.brand {
+  display: inline-block;
+}
+
+.masthead {
+  border-top: $height-header-border solid $color-background-lightest;
+  height: ($height-header + $height-header-border);
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.logo {
+  background: image-url('mwphp-logo.png') center center no-repeat;
+  float: left;
+  @include background-size(145px, 150px);
+  height: 150px;
+  position: absolute;
+  top: -1.6em;
+  width: 145px;
+
+  a {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    text-indent: -9999px;
+    top: 0;
+  }
+}

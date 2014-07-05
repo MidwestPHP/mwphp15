@@ -1,1 +1,8 @@
 @import '../settings';
+
+.sidebar {
+  background: $color-background-primary-dark;
+  color: $color-text-light;
+  min-height: 400px;
+  padding: 2em 1em;
+}

@@ -14,5 +14,21 @@
   clear: both;
   margin: $header-total-height auto 2em auto;
   min-height: 400px;
+  overflow: hidden;
   padding: 4em 1em 2em 1em;
+
+  &.with-sidebar {
+    padding: 2em 0 2em 1em;
+
+    .page-content {
+      float: left;
+      padding-top: 2em;
+      width: 60%;
+    }
+
+    .sidebar {
+      float: right;
+      width: 35%;
+    }
+  }
 }

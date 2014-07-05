@@ -47,9 +47,21 @@
                 </div>
             </header><!-- .masthead -->
 
-            <main class="main-content inner-wrapper">
-                <h1>{{ page.title }}</h1>
-                {% block content_wrapper %}{% block content %}{% endblock %}{% endblock %}
+            <main class="main-content inner-wrapper{% if page.hasSidebar %} with-sidebar{% endif %}">
+                <article class="page-content">
+                    <h1>{{ page.title }}</h1>
+                    {% block content_wrapper %}{% block content %}{% endblock %}{% endblock %}
+                </article>
+
+                {% if page.hasSidebar %}
+                <aside class="sidebar">
+                    <h1>Sidebar</h1>
+                    <p>Not sure what we'll put here just yet - possibly sponsor info and/or maybe our MailChimp signup?
+                        If we're placing logos, the blue background will likely be a bit much, but I wanted to get some
+                        kind of dynamic sidebar mechanism in place. Also, this text is currently in the default layout file
+                        and will need to be moved into its own content file.</p>
+                </aside>
+                {% endif %}
             </main>
 
             <footer class="colophon">

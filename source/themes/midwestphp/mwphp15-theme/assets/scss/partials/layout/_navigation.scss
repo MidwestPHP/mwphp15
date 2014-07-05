@@ -44,6 +44,7 @@
     font-weight: 400;
     letter-spacing: 0.03em;
     text-decoration: none;
+    padding: 0.5em;
   }
 
   .primary-nav {
@@ -67,7 +68,6 @@
     li {
       background-color: inherit;
       display: inline-block;
-      padding: 0.5em;
 
       &.register {
         background: $color-background-primary-dark;

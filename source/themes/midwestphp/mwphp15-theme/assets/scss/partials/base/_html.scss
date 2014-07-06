@@ -12,6 +12,8 @@ body {
   font-family: $sans;
   font-size: $size-font-base;
   font-weight: 300;
+  position: relative;
+  z-index: 1;
 }
 
 p {

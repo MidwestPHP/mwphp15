@@ -1,6 +1,94 @@
 @import '../settings';
 
-/* Chrome, Safari, Opera */
+.menu {
+  a {
+    color: $color-links-dark;
+    display: block;
+    font-size: 1em;
+    font-weight: 400;
+    letter-spacing: 0.03em;
+    text-decoration: none;
+  }
+
+  li.register {
+    background-color: $color-background-primary-dark;
+    border-color: $color-background-primary-light;
+    @include transition(background-color 150ms ease-in, color 150ms ease-in, border-color 150ms ease-in);
+    margin-left: 0.5em;
+    text-transform: uppercase;
+
+    a {
+      color: $color-text-light;
+    }
+  }
+}
+
+.navbar {
+  background: $color-gray-lightest;
+  background: $color-gray-lightest-transluscent;
+  box-shadow: 0 5px 0 0px rgba(210,210,210,0.8);
+  @include transition(box-shadow 300ms ease-out);
+  display: block;
+  height: $height-header;
+  margin-right: 1em;
+  overflow: hidden;
+  width: 100%;
+
+  a {
+    padding: 0.5em;
+  }
+}
+
+.primary-nav {
+  display: table;
+  float: right;
+  height: $height-header;
+  margin-left: 10em;
+  table-layout: fixed;
+  vertical-align: baseline;
+
+  ul {
+    display: table-cell;
+    list-style-type: none;
+    padding-bottom: 1em;
+    position: relative;
+    vertical-align: bottom;
+    width: auto;
+  }
+
+  li {
+    background-color: inherit;
+    border-bottom: 0.3125em solid transparent;
+    display: inline-block;
+    position: relative;
+
+    &:hover {
+      background: $color-background-primary-dark;
+      border-bottom: 5px solid $color-background-primary-light;
+      @include transition(background-color 150ms ease-in, color 150ms ease-in, border-color 150ms ease-in);
+
+      a {
+        color: $color-text-light;
+      }
+    }
+
+    &:active {
+      border-bottom: 0 none;
+      @include transition(top 500ms ease-in);
+      top: 3px;
+
+      a {
+        bottom: 0;
+      }
+    }
+  }
+}
+
+.menu-toggle {
+  display: none;
+}
+
+// Glow animation for register button
 @-webkit-keyframes glow {
   50% {
     background-color: $color-background-primary-light;
@@ -8,7 +96,6 @@
   }
 }
 
-/* Standard syntax */
 @keyframes glow {
   50% {
     background-color: $color-background-primary-light;
@@ -17,89 +104,98 @@
 }
 
 .masthead:hover .navbar {
-  box-shadow: 0 3px 0 3px $color-background-primary-dark;
+  box-shadow: 0 5px 0 0 $color-background-primary-dark;
   @include transition(box-shadow 300ms ease-in);
 
   .primary-nav {
     li.register {
-      -webkit-animation: glow 3s linear; /* Chrome, Safari, Opera */
+      -webkit-animation: glow 3s linear;
       animation: glow 3s linear;
       -webkit-animation-iteration-count: infinite;
       animation-iteration-count: infinite;
     }
   }
 }
-.navbar {
-  background: $color-gray-lightest;
-  background: $color-gray-lightest-transluscent;
-  box-shadow: 0 3px 0 3px rgba(210,210,210,0.8);
-  @include transition(box-shadow 300ms ease-out);
-  display: block;
-  margin-right: 1em;
-  overflow: hidden;
-  width: 100%;
 
-  a {
-    color: $color-links-dark;
-    display: block;
-    font-size: 1em;
-    font-weight: 400;
-    letter-spacing: 0.03em;
-    text-decoration: none;
-    padding: 0.5em;
-  }
-
+// Media Queries
+@media screen and (max-width: 60em) {
   .primary-nav {
-    display: table;
-    float: right;
-    height: $height-header;
-    margin-left: 10em;
-    table-layout: fixed;
-    vertical-align: baseline;
-
-    ul {
-      display: table-cell;
-      list-style-type: none;
-      padding-bottom: 1em;
-      position: relative;
-      vertical-align: bottom;
-      width: auto;
+    a {
+      font-size: 0.9375em;
     }
+  }
+}
+
+@media screen and (max-width: 51.25em) {
+  .primary-nav {
+    margin-left: 9em;
 
     li {
-      background-color: inherit;
-      border-bottom: 5px solid transparent;
-      display: inline-block;
-      position: relative;
+      margin-right: -0.125em;
 
       &.register {
-        background: $color-background-primary-dark;
-        border-color: $color-background-primary-light;
-        @include transition(background-color 150ms ease-in, color 150ms ease-in, border-color 150ms ease-in);
-        text-transform: uppercase;
+        margin-left: 0.1em;
+      }
+    }
+
+    a {
+      font-size: 0.9333333em;
+      letter-spacing: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 47.5em) {
+  .js {
+    .primary-nav {
+      display: inline-block;
+      margin-right: 1em;
+      position: relative;
+      width: 78px;
+
+      ul {
+        display: none;
+      }
+    }
+
+    .menu-toggle {
+      background: image-url('menu-icon.png') center center no-repeat;
+      bottom: 0;
+      cursor: pointer;
+      display: block;
+      @include background-size(78px, 83px);
+      height: 83px;
+      margin: auto;
+      position: absolute;
+      top: 0;
+      width: 78px;
+    }
+
+    .mobile-nav-menu {
+      background: $color-background-primary-light;
+      display: block;
+      overflow: hidden;
+      padding: 2.5em 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: 0;
+
+      .menu {
+        position: relative;
 
         a {
           color: $color-text-light;
+          letter-spacing: 0.05em;
+          padding: 0.5em 2em;
         }
       }
 
-      &:hover {
-        background: $color-background-primary-dark;
-        border-bottom: 5px solid $color-background-primary-light;
-        @include transition(background-color 150ms ease-in, color 150ms ease-in, border-color 150ms ease-in);
+      li.register {
+        margin: 0 0 1em 0;
 
         a {
-          color: $color-text-light;
-        }
-      }
-
-      &:active {
-        border-bottom: 0 none;
-        @include transition(top 500ms ease-in);
-        top: 3px;
-
-        a {
-          bottom: 0;
+          padding: 1em 2em;
         }
       }
     }

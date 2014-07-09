@@ -1,0 +1,12 @@
+#!/bin/sh
+
+alias gitls='git log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate'
+alias gitll='git log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat'
+alias gitld='git log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=relative'
+alias gitlds='git log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short'
+
+command_notation 'gitls' 'Pretty log format showing commit messages'
+command_notation 'gitll' 'Pretty log format showing files changed'
+command_notation 'gitld' 'Pretty log format showing relative commit dates'
+command_notation 'gitlds' 'Pretty log format showing commit dates'
+

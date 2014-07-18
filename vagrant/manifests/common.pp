@@ -19,7 +19,7 @@ file {
 
 class {
     'apt':
-        always_apt_update => true;
+        always_apt_update => false;
     'concat::setup':
 }
 

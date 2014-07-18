@@ -82,9 +82,13 @@ supervisor::program {
         numprocs    => 1,
         command     => 'sculpin generate --watch --env=vagrant',
         directory   => '/var/www',
-        user        => 'www-data',
-        group       => 'www-data',
-        require     => Exec['sculpin-phar-install', 'sculpin-install'];
+        user        => 'vagrant',
+        group       => 'users',
+        environment => "COMPOSER_HOME=~/.composer",
+        require     => [
+            Exec['sculpin-phar-install', 'sculpin-install'],
+            Class['nginx']
+        ];
 
     'compass-watcher':
         ensure      => present,
@@ -95,5 +99,8 @@ supervisor::program {
         directory   => '/var/www/source/themes/midwestphp/mwphp15-theme',
         user        => 'www-data',
         group       => 'www-data',
-        require     => Exec['compass_install', 'sculpin-install'];
+        require     => [
+            Exec['compass_install', 'sculpin-install'],
+            Class['nginx']
+        ];
 }

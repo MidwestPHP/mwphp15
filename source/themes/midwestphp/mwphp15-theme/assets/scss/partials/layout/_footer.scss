@@ -2,15 +2,16 @@
 
 .colophon {
   background: $color-background-primary-light;
-  clear: both;
   color: $color-text-light;
-  font-size: 1em;
-  font-weight: 400;
-  height: 100px;
-  padding: 2em 0;
-  text-align: center;
-  width: 100%;
+  .social-media{
+    font-weight: 400;
+  }
+  .footer-content {
+    text-align: center;
+    height: 100px;
+    font-weight: 400;
+    font-size: $size-font-base;
+    padding: 2em 0;
+  }
 }
 
-.footer-content {
-}

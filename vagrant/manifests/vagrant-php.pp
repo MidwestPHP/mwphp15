@@ -82,8 +82,8 @@ supervisor::program {
         numprocs    => 1,
         command     => 'sculpin generate --watch --env=vagrant',
         directory   => '/var/www',
-        user        => 'vagrant',
-        group       => 'users',
+        user        => 'www-data',
+        group       => 'www-data',
         environment => "COMPOSER_HOME=~/.composer",
         require     => [
             Exec['sculpin-phar-install', 'sculpin-install'],

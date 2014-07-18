@@ -65,11 +65,8 @@
                 {% endif %}
             </main>
 
-            <footer class="colophon">
-                <div class="footer-content inner-wrapper">
-                    &copy; {{ "now"|date("Y") }} {{ site.title }}
-                </div>
-            </footer>
+            {% include 'footer' %}
+
         </div><!-- .wrapper -->
         <div class="mobile-nav-menu"></div><!-- placeholder for mobile nav -->
 

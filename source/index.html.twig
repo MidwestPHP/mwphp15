@@ -1,0 +1,34 @@
+---
+layout: splash
+title: Home
+---
+
+{%  if page.layout == 'splash'  %}
+
+    <div class="grid grid-pad">
+        <img class="col-1-4" id="splash-image" src="/{{ theme_path('assets/img/mwphp-logo.png') }}" />
+        <div class="col-3-4">
+            <div class="grid grid-pad">
+                <h1>2015 Midwest PHP</h1>
+                <h2>Conference March 14-15 2015</h2>
+                <h3>St Thomas University Minneapolis</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="grid grid-pad">
+        <div class="grid-1-1">
+            Get ready for the Midwest PHP 2015 Conference!!  Sunny and cold MN. There should be some better text here but i am drunk on a train!!  I should probably be some kind of accent color??
+        </div>
+    </div>
+
+    <div class="grid grid-pad">
+        <div class="grid-1-1">
+            Signup for information!!!
+            <input type="text" name="signup" id="signup" placeholder="email@address.com">
+        </div>
+    </div>
+
+{%  elseif page.layout == 'default' %}
+    Not Splash
+{%  endif  %}

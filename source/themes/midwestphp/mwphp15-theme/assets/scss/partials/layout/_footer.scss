@@ -3,15 +3,17 @@
 .colophon {
   background: $color-background-primary-light;
   color: $color-text-light;
-  .social-media{
-    font-weight: 400;
+  .footer-row{
+    .social-media{
+      font-weight: 400;
+    }
+    .footer-content {
+      text-align: center;
+      height: 100px;
+      font-weight: 400;
+      font-size: $size-font-base;
+    }
   }
-  .footer-content {
-    text-align: center;
-    height: 100px;
-    font-weight: 400;
-    font-size: $size-font-base;
-    padding: 2em 0;
-  }
+
 }
 

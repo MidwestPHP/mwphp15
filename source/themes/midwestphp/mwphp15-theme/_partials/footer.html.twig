@@ -1,24 +1,19 @@
 <footer class="colophon">
-    <div class="grid grid-pad footer-row">
-        <div class="col-1-3 social-media">
-            <a href="https://twitter.com/midwestphp">
-                <img src="/{{ theme_path('assets/img/twitter.png') }}" alt="Twitter" />Twitter
-            </a>
-        </div>
-        <div class="col-1-3 social-media">
-            <a href="https://www.facebook.com/midwestconf">
-                <img src="/{{ theme_path('assets/img/facebook.png') }}" alt="Facebook" />Facebook
-            </a>
-        </div>
-        <div class="col-1-3 social-media">
-            <a href="https://twitter.com/midwestphp">
-                Email
-            </a>
-        </div>
-    </div>
+    <ul class="grid grid-pad social-media footer-row">
+        <li><a href="https://twitter.com/midwestphp"
+               data-image="twitter" title="Midwest PHP on Twitter">Twitter</a></li>
+
+        <li><a href="https://www.facebook.com/midwestconf"
+               data-image="facebook" title="Midwest PHP on Facebook">Facebook</a></li>
+
+        <li><a href="mailto:info@midwestphp.com"
+               data-image="email" title="Email Midwest PHP">Email</a></li>
+    </ul><!-- .footer-row -->
+
     <div class="grid grid-pad footer-row">
         <div class="col-1-1 footer-content">
-            Copyright &copy; {{ "now"|date("Y") }} {{ site.title }} - <a href="/code-of-conduct/">Code of Conduct</a>
+            <p>Copyright &copy; {{ "now"|date("Y") }} {{ site.title }} -
+                <a href="/code-of-conduct/">Code of Conduct</a></p>
         </div>
-    </div>
-</footer>
+    </div><!-- .footer-row -->
+</footer><!-- .colophon -->

@@ -3,17 +3,52 @@
 .colophon {
   background: $color-background-primary-light;
   color: $color-text-light;
-  .footer-row{
-    .social-media{
-      font-weight: 400;
+
+  .social-media {
+    display: block;
+    list-style: none;
+    font-weight: 400;
+    text-align: center;
+    width: 100%;
+
+    li {
+      display: inline-block;
+      margin: 0 0.5em;
     }
-    .footer-content {
-      text-align: center;
-      height: 100px;
-      font-weight: 400;
-      font-size: $size-font-base;
+
+    a {
+      @include background-size(50px, 50px);
+      background-position: center center;
+      background-repeat: no-repeat;
+      display: inline-block;
+      height: 50px;
+      text-indent: -9999px;
+      width: 50px;
+
+      &[data-image*=twitter] {
+        background-image: image-url('twitter.png');
+      }
+
+      &[data-image*=facebook] {
+        background-image: image-url('facebook.png');
+      }
+
+      &[data-image*=email] {
+        background-image: image-url('mail-icon.png');
+      }
     }
   }
 
+  .footer-content {
+    height: 100px;
+    font-size: $size-font-base;
+    font-weight: 400;
+    text-align: center;
+
+    a {
+      color: $color-text-light;
+      display: inline-block;
+    }
+  }
 }
 

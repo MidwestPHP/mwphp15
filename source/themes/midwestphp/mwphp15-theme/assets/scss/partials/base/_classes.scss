@@ -1,1 +1,9 @@
 @import '../settings';
+
+.button {
+  background: $color-background-primary-dark;
+  border: 0 none;
+  border-bottom: 5px solid $color-background-primary-light;
+  color: $color-text-light;
+  cursor: pointer;
+}

@@ -1,0 +1,43 @@
+@import '../settings';
+
+#mc_embed_signup {
+  font-size: 1.125em;
+
+  label,
+  input {
+    display: block;
+    font-size: 1em;
+    line-height: 1.4em;
+    margin-bottom: 1em;
+  }
+
+  input[type=email],
+  input[type=submit] {
+    display: inline-block;
+    vertical-align: top;
+    width: auto;
+  }
+
+  input[type=email] {
+    border: 1px solid $color-gray-medium;
+    color: $color-gray-dark;
+    font-weight: 200;
+    padding: 0.5em;
+
+    &:focus {
+      outline: 3px solid $color-background-primary-light;
+    }
+  }
+
+  input[type=submit] {
+    @extend .button;
+    color: $color-text-light;
+    padding: 0.5em 1em;
+    text-transform: uppercase;
+
+    &:focus,
+    &:active {
+      outline: none;
+    }
+  }
+}

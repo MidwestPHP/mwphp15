@@ -1,0 +1,84 @@
+@import '../settings';
+
+#splash-image {
+  float: left;
+  position: absolute;
+  top: -70px;
+  width: 300px;
+}
+
+.splash {
+  .wrapper {
+    background: $color-background-lightest;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    z-index: 1;
+  }
+
+  .inner-wrapper {
+    display: block;
+    margin: 0 auto;
+    max-width: $width-max-outer;
+  }
+
+  .main-content {
+    background: $color-background-lightest;
+    clear: both;
+    margin: 0 auto 2em auto;
+    min-height: 0;
+    overflow: hidden;
+    padding: 0;
+  }
+
+  .page-content {
+    margin: 0 auto;
+    padding: 6em 0 4em 0;
+    width: 85%;
+  }
+}
+
+.splash-header {
+  background: $color-gray-lightest;
+  border-bottom: 5px solid $color-gray-medium;
+  height: 200px;
+  margin-bottom: 5em;
+  position: relative;
+  top: 5em;
+  width: 100%;
+
+  .inner-wrapper {
+    position: relative;
+  }
+
+  .content {
+    display: table-cell;
+    height: 200px;
+    padding-left: 350px;
+    table-layout: fixed;
+    vertical-align: middle;
+  }
+}
+
+.splash-page-content {
+}
+
+@media screen and (max-width: 60em) {
+  .inner-wrapper {
+    width: 95%;
+  }
+}
+
+@media screen and (max-width: 47.5em) {
+  .main-content {
+    &.with-sidebar {
+       padding-right: 1em;
+
+      .page-content {
+        margin-bottom: 1em;
+        width: 100%;
+      }
+    }
+  }
+}

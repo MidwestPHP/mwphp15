@@ -1,17 +1,24 @@
 <!DOCTYPE html>
-<html>
-    {% include 'head_tag' %}
+<html class="splash">
 
-    <link href="//cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
-    <style type="text/css">
-        #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
-        /* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
-           We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
-    </style>
+    {% include 'head_tag' %}
 
     <body class="no-js">
         <div class="wrapper">
-            <main class="main-content inner-wrapper">
+
+            <header class="splash-header" role="banner">
+                <div class="inner-wrapper">
+                    <img id="splash-image" src="/{{ theme_path('assets/img/mwphp-logo.png') }}" />
+
+                    <div class="content">
+                        <h1>Midwest PHP 2015 Conference</h1>
+                        <h2>St. Thomas University – Minneapolis, MN</h2>
+                        <h3>March 14-15, 2015</h3>
+                    </div>
+                </div>
+            </header>
+
+            <main class="main-content">
                 <article class="page-content">
                     {% block content_wrapper %}
                         {% block content %}

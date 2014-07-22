@@ -31,5 +31,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
             mount_options: ['rw', 'vers=3', 'tcp', 'nolock']
         }
         config.cache.enable :apt
+        config.cache.enable :gem
     end
 end

@@ -17,24 +17,23 @@
     }
 
     a {
-      @include background-size(50px, 50px);
-      background-position: center center;
-      background-repeat: no-repeat;
+      background-image: image-url('social-sprites.png');
+      @include background-size(178px, 56px);
       display: inline-block;
       height: 50px;
       text-indent: -9999px;
       width: 50px;
 
-      &[data-image*=twitter] {
-        background-image: image-url('twitter.png');
+      &[data-image=twitter] {
+        background-position: -3px 54px;
       }
 
-      &[data-image*=facebook] {
-        background-image: image-url('facebook.png');
+      &[data-image=facebook] {
+        background-position: -60px 54px;
       }
 
-      &[data-image*=email] {
-        background-image: image-url('mail-icon.png');
+      &[data-image=email] {
+        background-position: -125px 54px;
       }
     }
   }
@@ -48,6 +47,33 @@
     a {
       color: $color-text-light;
       display: inline-block;
+    }
+  }
+}
+
+/* HIGH-RESOLUTION DISPLAYS */
+@media only screen and (-moz-min-device-pixel-ratio: 1.5),
+only screen and (-o-min-device-pixel-ratio: 3 / 2),
+only screen and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (min-devicepixel-ratio: 1.5),
+only screen and (min-resolution: 1.5dppx) {
+  .colophon {
+    .social-media {
+      a {
+        background-image: image-url('social-sprites_x2.png');
+
+        &[data-image=twitter] {
+          background-position: -6px 53px;
+        }
+
+        &[data-image=facebook] {
+          background-position: -63px 53px;
+        }
+
+        &[data-image=email] {
+          background-position: -121px 53px;
+        }
+      }
     }
   }
 }

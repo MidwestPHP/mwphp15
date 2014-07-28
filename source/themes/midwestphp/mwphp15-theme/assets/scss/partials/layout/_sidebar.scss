@@ -1,0 +1,20 @@
+@import '../settings';
+
+.sidebar {
+  background: $color-background-primary-dark;
+  color: $color-text-light;
+  float: right;
+  min-height: 400px;
+  margin-top: 3em;
+  padding: 1em;
+  width: 35%;
+}
+
+@media screen and (max-width: 47.5em) {
+  .sidebar {
+    clear: both;
+    float: none;
+    min-height: 0;
+    width: 100%;
+  }
+}

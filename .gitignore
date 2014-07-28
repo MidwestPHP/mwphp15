@@ -2,7 +2,19 @@
 /app/cache/*
 /app/config/sculpin_kernel_*.yml
 /app/config/sculpin_site_*.yml
+!/app/config/sculpin_site_vagrant.yml
 /app/logs/*
 /output_*/
 /source/components/
 s3.conf
+
+# Additional ignores
+
+# PhpStorm settings
+.idea/
+
+# SASS Cache files
+.sass-cache/
+
+# Theme-generated stylesheets
+**/themes/**/assets/**/*.css

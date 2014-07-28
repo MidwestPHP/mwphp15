@@ -1,18 +1,16 @@
 {
-    "name": "sculpin/blog-skeleton",
-    "description": "A Skeleton for a Sculpin Based Blog",
-    "type": "sculpin-skeleton",
+    "name": "MidwestPHP/mwphp15",
+    "description": "2015 Midwest PHP Site",
     "license": "MIT",
     "authors": [
         {
-            "name": "Dragonfly Development Inc.",
-            "email": "info@dflydev.com",
-            "homepage": "http://dflydev.com"
+            "name": "Jeremy Ward",
+            "homepage": "http://www.jmichaelward.com/"
         },
         {
-            "name": "Beau Simensen",
-            "email": "beau@dflydev.com",
-            "homepage": "http://beausimensen.com"
+            "name": "Geoffery Wagner",
+            "email": "wageof@gmail.com",
+            "homepage": "http://gwagner.github.io"
         }
     ],
     "require": {

@@ -1,0 +1,80 @@
+@import '../settings';
+
+.colophon {
+  background: $color-background-primary-light;
+  color: $color-text-light;
+
+  .social-media {
+    display: block;
+    list-style: none;
+    font-weight: 400;
+    text-align: center;
+    width: 100%;
+
+    li {
+      display: inline-block;
+      margin: 0 0.5em;
+    }
+
+    a {
+      background-image: image-url('social-sprites.png');
+      @include background-size(178px, 56px);
+      display: inline-block;
+      height: 50px;
+      text-indent: -9999px;
+      width: 50px;
+
+      &[data-image=twitter] {
+        background-position: -3px 54px;
+      }
+
+      &[data-image=facebook] {
+        background-position: -60px 54px;
+      }
+
+      &[data-image=email] {
+        background-position: -125px 54px;
+      }
+    }
+  }
+
+  .footer-content {
+    height: 100px;
+    font-size: $size-font-base;
+    font-weight: 400;
+    text-align: center;
+
+    a {
+      color: $color-text-light;
+      display: inline-block;
+    }
+  }
+}
+
+/* HIGH-RESOLUTION DISPLAYS */
+@media only screen and (-moz-min-device-pixel-ratio: 1.5),
+only screen and (-o-min-device-pixel-ratio: 3 / 2),
+only screen and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (min-devicepixel-ratio: 1.5),
+only screen and (min-resolution: 1.5dppx) {
+  .colophon {
+    .social-media {
+      a {
+        background-image: image-url('social-sprites_x2.png');
+
+        &[data-image=twitter] {
+          background-position: -6px 53px;
+        }
+
+        &[data-image=facebook] {
+          background-position: -63px 53px;
+        }
+
+        &[data-image=email] {
+          background-position: -121px 53px;
+        }
+      }
+    }
+  }
+}
+

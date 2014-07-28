@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html class="splash">
+
+    {% include 'head_tag' %}
+
+    <body class="no-js">
+        <div class="wrapper">
+
+            <header class="splash-header" role="banner">
+                <div class="inner-wrapper">
+                    <a href="/">
+                        <img id="splash-image" src="/{{ theme_path('assets/img/mwphp-logo.png') }}" />
+                    </a>
+
+                    <div class="content">
+                        <h1>Midwest PHP 2015 Conference</h1>
+                        <h2>St. Thomas University – Minneapolis, MN</h2>
+                        <h3>March 14-15, 2015</h3>
+                    </div>
+                </div>
+            </header>
+
+            <main class="main-content">
+                <article class="page-content">
+                    {% block content_wrapper %}
+                        {% block content %}
+                        {% endblock %}
+                    {% endblock %}
+                </article>
+            </main>
+
+            {% include 'footer' %}
+
+        </div>{# .wrapper #}
+        <div class="mobile-nav-menu"></div>{# placeholder for mobile nav #}
+
+        {% include 'footer_scripts' %}
+
+    </body>
+</html>

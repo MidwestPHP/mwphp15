@@ -1,0 +1,25 @@
+---
+layout: default
+title: Home
+---
+
+{%  if site.template == 'splash'  %}
+
+        <p>Engage with industry leaders from PHP, Javascript, HTML, CSS, and all other technologies
+            that make the web possible!</p>
+
+        <p>All technologists welcome!</p>
+
+        <div id="mc_embed_signup">
+            <form action="//midwestphp.us6.list-manage.com/subscribe/post?u=997a6609e4841195621a16d55&amp;id=b632b88998" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                <label for="mce-EMAIL">For up-to-date information about Midwest PHP, subscribe to our mailing list!</label>
+                <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+                {# real people should not fill this in and expect good things - do not remove this or risk form bot signups #}
+                <div style="position: absolute; left: -5000px;"><input type="text" name="b_997a6609e4841195621a16d55_b632b88998" tabindex="-1" value=""></div>
+                <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
+            </form>
+        </div>
+
+{%  elseif site.template == 'default' %}
+    Not Splash
+{%  endif  %}

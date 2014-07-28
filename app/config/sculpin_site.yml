@@ -1,5 +1,8 @@
 # The contents of this file are parsed and made available as
 # via `site.*`. So for example, {{ site.title }} can be used
 # in a template to get the contents of the `title` key.
-title: Midwest PHP 2015
-#subtitle: To Get You Started
+title: Midwest PHP
+description: March 14-15, 2015 | St. Thomas University, Minneapolis, MN
+url: http://localhost:8000
+google_analytics_tracking_id: UA-99895-9
+template: splash

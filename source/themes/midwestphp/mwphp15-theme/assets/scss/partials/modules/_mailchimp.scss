@@ -1,8 +1,11 @@
 @import '../settings';
 
 #mc_embed_signup {
+  border-top: 1px solid $color-gray-medium;
   font-size: 1.125em;
+  margin-top: 3em;
   text-align: center;
+  padding: 2em 0;
 
   label {
     font-weight: 700;

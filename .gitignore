@@ -18,3 +18,4 @@ s3.conf
 
 # Theme-generated stylesheets
 **/themes/**/assets/**/*.css
+css/

@@ -17,23 +17,27 @@
     }
 
     a {
-      background-image: image-url('social-sprites.png');
-      @include background-size(178px, 56px);
+      background-image: image-url('social-sprites_x2.png');
+      @include background-size(218px, 52px);
       display: inline-block;
       height: 50px;
       text-indent: -9999px;
       width: 50px;
 
       &[data-image=twitter] {
-        background-position: -3px 54px;
+        background-position: 0 51px;
       }
 
       &[data-image=facebook] {
-        background-position: -60px 54px;
+        background-position: -52px 51px;
+      }
+
+      &[data-image=google-plus] {
+        background-position: -110px 51px;
       }
 
       &[data-image=email] {
-        background-position: -125px 54px;
+        background-position: -164px 51px;
       }
     }
   }
@@ -61,18 +65,6 @@ only screen and (min-resolution: 1.5dppx) {
     .social-media {
       a {
         background-image: image-url('social-sprites_x2.png');
-
-        &[data-image=twitter] {
-          background-position: -6px 53px;
-        }
-
-        &[data-image=facebook] {
-          background-position: -63px 53px;
-        }
-
-        &[data-image=email] {
-          background-position: -121px 53px;
-        }
       }
     }
   }

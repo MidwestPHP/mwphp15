@@ -34,8 +34,9 @@
 
   .page-content {
     margin: 0 auto;
+    max-width: 75em;
     padding: 6em 0 4em 0;
-    width: 85%;
+    width: 90%;
   }
 }
 
@@ -52,7 +53,7 @@
     display: table;
     position: relative;
     table-layout: fixed;
-    width: 100%;
+    width: 90%;
   }
 
   .content {
@@ -74,7 +75,6 @@
   }
 
   #splash-image {
-    left: 10px;
     top: -50px;
     width: 275px;
   }

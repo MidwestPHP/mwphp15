@@ -1,36 +1,12 @@
 ---
 layout: default
 title: About
-hasSidebar: true
+hasSidebar: false
 
 ---
 
-Here is a little information about the author or the blog.
+The Midwest PHP Conference started in 2012 with the idea of bringing experts from around the globe to Minneapolis for two days to share best practices, ideas, and techniques about building state-of-the-art software applications.
 
-Lorem ipsum dolor sit amet, nam laoreet explicari ex, choro volutpat definiebas duo ne, mei purto oratio dicant in.
-Primis graecis ex his, nihil cetero tractatos in vim. Vim eu posse menandri, oratio atomorum adolescens cu ius. Postea
-labore oporteat id est, virtute lucilius his ne. Ius in efficiantur consectetuer, an unum consul cum.
+Not just about PHP, Midwest PHP includes a wide range of topics of interest to the modern developer, such as JavaScript, Frameworks, Content Management Systems, Database & Server Administration, DevOps, Mobile Development, plus an assortment of non-technical and business-relevant skills.
 
-Nec at novum labore minimum. Pri graece volumus incorrupte at. Sit unum possim docendi eu, eu mea graece postulant
-theophrastus. Mei ne fabulas nominavi, id pro nonumy nostro. Ei mea purto dissentiet, ne ubique menandri cum, viris
-verear viderer in duo. Ne vim tantas partem principes, nostro denique partiendo vim an, atqui forensibus democritum ut
-mel.
-
-Here is some markdown:
-
-Primary Heading
-===============
-
-Secondary Heading
------------------
-
-### Third Level Heading
-
-Lorem ipsum dolor sit amet, nam laoreet explicari ex, choro volutpat definiebas duo ne, mei purto oratio dicant in.
-Primis graecis ex his, nihil cetero tractatos in vim. Vim eu posse menandri, oratio atomorum adolescens cu ius. Postea
-labore oporteat id est, virtute lucilius his ne. Ius in efficiantur consectetuer, an unum consul cum.
-
-Nec at novum labore minimum. Pri graece volumus incorrupte at. Sit unum possim docendi eu, eu mea graece postulant
-theophrastus. Mei ne fabulas nominavi, id pro nonumy nostro. Ei mea purto dissentiet, ne ubique menandri cum, viris
-verear viderer in duo. Ne vim tantas partem principes, nostro denique partiendo vim an, atqui forensibus democritum ut
-mel.
+Our aim is to provide exceptional content and networking opportunities to help maximize the value for our 200+ attendees, presenters, and sponsors alike.

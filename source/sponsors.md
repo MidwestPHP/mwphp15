@@ -4,8 +4,9 @@ title: Sponsors
 
 ---
 
-Companies like yours make Midwest PHP possible. We offer a wide range of sponsorship packages to provide visibility to your brand during our two days of conference events. Our hope is that you will find a package that is a good fit for your company and that you choose to become a part of our conference and community.
- 
-If you’re interested in sponsoring Midwest PHP but are unable to find a package that meets your needs, we would be happy to discuss any ideas you might have.
+Sponsors play a huge role in making Midwest PHP possible. Through their generous contributions, we've been fortunate to invite
+industry leaders to come and share their knowledge and expertise about PHP and related technologies, and provide numerous
+networking opportunities for our attendees and partners &mdash; all for a fraction of the cost of other technology conferences.
 
-For questions related to these available packages or to discuss alternative sponsorship opportunities please contact us at info@midwestphp.org.
+If your organization is interested in sponsoring the Midwest PHP 2015 Conference, please contact us at info@midwestphp.org, and
+we'll send you a copy of our sponsorship prospectus.

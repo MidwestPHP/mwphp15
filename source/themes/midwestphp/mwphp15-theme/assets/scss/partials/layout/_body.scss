@@ -22,7 +22,15 @@
   margin: 0 auto 2em auto;
   min-height: 400px;
   overflow: hidden;
-  padding: $header-total-height 1em 2em 1em;
+  padding: $header-total-height 0 2em 1em;
+
+  a {
+    color: $color-links-dark;
+    text-decoration: none;
+    &.phone-link {
+      color: $color-text-dark;
+    }
+  }
 
   &.with-sidebar {
     padding-right: 0;
@@ -36,6 +44,16 @@
 
 .page-content {
   margin-top: 4em;
+}
+
+.header-image {
+  margin-bottom: 1em;
+}
+
+.hotels {
+  h3 {
+    margin-bottom: 0.3em;
+  }
 }
 
 @media screen and (max-width: 60em) {

@@ -2,5 +2,6 @@ sculpin:
     permalink: pretty
 sculpin_content_types:
     sponsors:
+        permalink: sponsors/:basename/
 sculpin_theme:
     theme: midwestphp/mwphp15-theme

@@ -1,5 +1,14 @@
+sculpin:
+    permalink: pretty
 sculpin_content_types:
-    posts:
-        permalink: blog/:year/:month/:day/:filename/
+    sponsors:
+        permalink: pretty
+        type: path
+        path: sponsors
+        singular_name: sponsor
+        layout: default
+        enabled: true
+        taxonomies:
+            - tags
 sculpin_theme:
     theme: midwestphp/mwphp15-theme

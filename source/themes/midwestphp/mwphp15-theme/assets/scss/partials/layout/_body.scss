@@ -56,6 +56,37 @@
   }
 }
 
+.sponsor-page {
+
+}
+
+.sponsor-article {
+  margin-bottom: 3em;
+}
+
+.sponsors {
+  border-top: 1px solid $color-background-primary-light;
+  padding-top: 2em;
+}
+
+.sponsors--heading {
+  text-align: center;
+}
+
+.sponsor {
+  background: $color-gray-lightest;
+  display: inline-block;
+  height: 250px;
+  margin: 0 1%;
+  text-align: center;
+  vertical-align: top;
+  width: 22.9%;
+
+  &[data-level="gold"] {
+    border-bottom: 5px solid gold;
+  }
+}
+
 @media screen and (max-width: 60em) {
   .inner-wrapper {
     width: 95%;

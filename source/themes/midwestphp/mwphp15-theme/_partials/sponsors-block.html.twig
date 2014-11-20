@@ -1,0 +1,15 @@
+{% if data.sponsors %}
+    <section class="sponsors">
+        {% if page.title != 'Sponsors' %}
+            <h2 class="sponsors--heading">Midwest PHP 2015 Sponsors</h2>
+        {% endif %}
+
+        {% for sponsor in data.sponsors %}
+            <div class="sponsor" data-level="{{ sponsor.level | lower }}">
+                <a href="{{ sponsor.url }}">
+                    <h3 class="sponsor--heading">{{ sponsor.name }}</h3>
+                </a>
+            </div>
+        {% endfor %}
+    </section>
+{% endif %}

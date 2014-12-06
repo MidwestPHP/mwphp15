@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Home
+use: [sponsors]
 ---
 <p>Save the date! The Midwest PHP Conference returns to the University of St. Thomas Downtown Minneapolis campus on
     March 14 &amp; 15, 2015. Now in its third year, the conference will bring together developers from across the PHP
@@ -32,6 +33,7 @@ title: Home
         </form>
     </div>
 
-{% elseif site.template == 'default' %}
-    Not Splash
+{% else %}
+    {% include 'sponsors-block' %}
 {% endif %}
+

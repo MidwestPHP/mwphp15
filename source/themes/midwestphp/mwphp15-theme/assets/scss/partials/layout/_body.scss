@@ -56,6 +56,93 @@
   }
 }
 
+.sponsor-page {
+
+}
+
+.sponsor-article {
+  margin-bottom: 3em;
+}
+
+.sponsors {
+  border-top: 1px solid $color-background-primary-light;
+  padding-top: 4em;
+  text-align: center;
+}
+
+.sponsors--heading {
+  margin-bottom: 0.8em;
+  text-align: center;
+}
+
+.sponsors--wrap {
+  margin-bottom: 2em;
+}
+
+.sponsors--wrap-heading {
+  margin-bottom: 0.5em;
+  text-align: center;
+}
+
+.sponsor {
+  background: $color-gray-lightest;
+  border-bottom: 5px solid;
+  display: inline-block;
+  height: 250px;
+  margin: 0 1% 1em 1%;
+  position: relative;
+  text-align: center;
+  width: 260px;
+
+  @include transition(all 0.3s);
+  vertical-align: top;
+
+  &:hover {
+    background: lighten($color-background-primary-light, 20%);
+    @include transition(all 0.3s);
+  }
+
+  &[data-level="platinum"] {
+    border-color: rgb(180,180,120);
+  }
+
+  &[data-level="gold"] {
+    border-color: #ffd700;
+  }
+
+  &[data-level="silver"] {
+    border-color: silver;
+  }
+
+  &[data-level="bronze"] {
+    border-color: #cd7f32;
+  }
+
+  &[data-level="community"] {
+    border-color: black;
+  }
+}
+
+.sponsor--link {
+  display: table;
+  height: 100%;
+  table-layout: fixed;
+  width: 100%;
+}
+
+.sponsor--info {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.sponsor--logo {
+  max-width: 90%;
+}
+
+.sponsor--logo + .sponsor--heading {
+  display: none;
+}
+
 @media screen and (max-width: 60em) {
   .inner-wrapper {
     width: 95%;

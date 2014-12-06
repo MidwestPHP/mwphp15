@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+{% include 'head_tag' %}
+
+<body class="sponsor-page no-js">
+<div class="wrapper">
+    <header class="masthead" role="banner">
+        {% include 'nav-bar' %}
+    </header>{# .masthead #}
+
+    <main class="main-content inner-wrapper{% if page.hasSidebar %} with-sidebar{% endif %}">
+        <article class="sponsor-article page-content">
+            <h1>{{ page.name }}</h1>
+            {% block content_wrapper %}
+                {% block content %}{% endblock %}
+            {% endblock %}
+        </article>
+
+        {% include 'sponsors-block' %}
+    </main>
+
+    {% include 'footer' %}
+
+</div>{# .wrapper #}
+
+<div class="mobile-nav-menu"></div>{# placeholder for mobile nav #}
+
+{% include 'footer_scripts' %}
+</body>
+</html>

@@ -1,0 +1,32 @@
+{% if data.speakers %}
+    <section class="speakers">
+
+        {% if page.title != 'Speakers' %}
+            <h2 class="speakers--heading">Midwest PHP 2015 speakers</h2>
+        {% endif %}
+
+        {% for speaker in data.speakers %}
+            <article class="speaker">
+                <a class="speaker--link" href="{{ speaker.url }}">
+                    <header>
+                        <div class="speaker--image">
+                            {% if speaker.image %}
+                                <img src="{{ site.url }}/img/speakers/{{ speaker.image }}" alt="{{ speaker.firstname }} {{ speaker.lastname }}"/>
+                            {% else %}
+                                <img src="/themes/midwestphp/mwphp15-theme/assets/img/mwphp-logo.png" alt="No speaker image available"/>
+                            {% endif %}
+                        </div><!-- .speaker--image -->
+                        <h1 class="speaker--name">{{ speaker.firstname }} {{ speaker.lastname }}</h1>
+                    </header>
+
+                    <div class="speaker-description">
+                        {{ speaker.description }}
+                    </div>
+                </a>
+            </article>
+
+        {% endfor %}
+
+    </section><!-- .speakers -->
+
+{% endif %}

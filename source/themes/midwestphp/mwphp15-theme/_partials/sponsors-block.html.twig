@@ -1,0 +1,34 @@
+{% if data.sponsors %}
+    {% set sponsorshipLevels = { 0: 'platinum', 1: 'gold', 2: 'silver', 3: 'bronze', 4: 'community' } %}
+    {% set levelName =  '' %}
+
+    <article class="sponsors">
+
+        {% if page.title != 'Sponsors' %}
+            <h2 class="sponsors--heading">Midwest PHP 2015 Sponsors</h2>
+        {% endif %}
+
+        {% for level, levelName in sponsorshipLevels %}
+            <section class="sponsors--wrap">
+                <h3 class="sponsors--wrap-heading">{{ levelName | title }}</h3>
+
+                {% for sponsor in data.sponsors %}
+                    {% if sponsor.level == level %}
+                        <div class="sponsor" data-level="{{ levelName }}">
+                            <a class="sponsor--link" href="{{ sponsor.url }}">
+                                <div class="sponsor--info">
+                                    {% if sponsor.logo %}
+                                        <img class="sponsor--logo" src="{{ site.url }}/img/logos/{{ sponsor.logo }}"/>
+                                    {% endif %}
+                                    <h3 class="sponsor--heading">{{ sponsor.name }}</h3>
+                                </div>
+                            </a>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </section><!-- .sponsors--wrap -->
+        {% endfor %}
+
+    </article><!-- .sponsors -->
+
+{% endif %}

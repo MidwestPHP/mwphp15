@@ -13,7 +13,7 @@
   li.register {
     background-color: $color-background-primary-dark;
     border-color: $color-background-primary-light;
-    @include transition(background-color 150ms ease-in, color 150ms ease-in, border-color 150ms ease-in);
+    @include transition(background-color 150ms ease-in, color 150ms ease-in, border 150ms ease-in);
     margin-left: 0.5em;
     text-transform: uppercase;
 
@@ -65,7 +65,7 @@
     &:hover {
       background: $color-background-primary-dark;
       border-bottom: 5px solid $color-background-primary-light;
-      @include transition(background-color 150ms ease-in, color 150ms ease-in, border-color 150ms ease-in);
+//      @include transition(background-color 150ms ease-in, color 150ms ease-in, border-color 150ms ease-in);
 
       a {
         color: $color-text-light;

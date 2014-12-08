@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+{% include 'head_tag' %}
+
+<body class="speaker-page no-js">
+<div class="wrapper">
+    <header class="masthead" role="banner">
+        {% include 'nav-bar' %}
+    </header>{# .masthead #}
+
+    <main class="main-content inner-wrapper{% if page.hasSidebar %} with-sidebar{% endif %}">
+        <article class="speaker-article page-content">
+            <header class="speaker-page-header">
+                <h1>{{ page.firstname }} {{ page.lastname }}</h1>
+                <div class="speaker--image">
+                    {% if page.image %}
+                        <img src="{{ site.url }}/img/speakers/{{ page.image }}" alt="{{ page.firstname }} {{ page.lastname }}"/>
+                    {% else %}
+                        <img src="/themes/midwestphp/mwphp15-theme/assets/img/mwphp-logo.png" alt="No speaker image available"/>
+                    {% endif %}
+                </div><!-- .speaker--image -->
+            </header>
+
+            <div class="speaker-content entry-content">
+                {% block content_wrapper %}
+                    {% block content %}{% endblock %}
+                {% endblock %}
+            </div>
+
+            <div class="speaker--selected-talks">
+                <h3>Selected talks</h3>
+                {% include 'talks-block' %}
+            </div>
+
+            {% if page.website or page.facebook or page.twitter or page.linkedin or page.youtube %}
+                <footer class="speaker-page-footer">
+                    <div class="speaker-page-links">
+                        <h4 class="speaker-page-links--title">Speaker links:</h4>
+                        <ul class="speaker-page-links--list">
+                            {% if page.website %}
+                                <li><a href="{{ page.website }}" title="{{ page.name }} website">Website</a></li>
+                            {% endif %}
+
+                            {% if page.facebook %}
+                                <li><a href="{{ page.facebook }}" title="{{ page.name }} on Facebook">Facebook</a></li>
+                            {% endif %}
+
+                            {% if page.twitter %}
+                                <li><a href="{{ page.twitter }}" title="{{ page.name }} on Twitter">Twitter</a></li>
+                            {% endif %}
+
+                            {% if page.linkedin %}
+                                <li><a href="{{ page.linkedin }}" title="{{ page.name }} on LinkedIn">LinkedIn</a></li>
+                            {% endif %}
+
+                            {% if page.youtube %}
+                                <li><a href="{{ page.youtube }}" title="{{ page.name }} on Youtube">YouTube</a></li>
+                            {% endif %}
+                        </ul>
+                    </div>
+                </footer>
+            {% endif %}
+        </article>
+    </main>
+
+    {% include 'footer' %}
+
+</div>{# .wrapper #}
+
+<div class="mobile-nav-menu"></div>{# placeholder for mobile nav #}
+
+{% include 'footer_scripts' %}
+</body>
+</html>

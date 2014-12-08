@@ -1,5 +1,11 @@
+sculpin:
+    permalink: pretty
 sculpin_content_types:
-    posts:
-        permalink: blog/:year/:month/:day/:filename/
+    sponsors:
+      permalink: sponsors/:slug_title
+    speakers:
+      permalink: speakers/:slug_title
+    talks:
+      permalink: talks/:slug_title
 sculpin_theme:
     theme: midwestphp/mwphp15-theme

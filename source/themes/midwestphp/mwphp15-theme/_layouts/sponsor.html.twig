@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+{% include 'head_tag' %}
+
+<body class="sponsor-page no-js">
+<div class="wrapper">
+    <header class="masthead" role="banner">
+        {% include 'nav-bar' %}
+    </header>{# .masthead #}
+
+    <main class="main-content inner-wrapper{% if page.hasSidebar %} with-sidebar{% endif %}">
+        <article class="sponsor-article page-content">
+            <header class="sponsor-page-header">
+                <h1 class="hidden">{{ page.name }}</h1>
+                <div class="sponsor-page--logo">
+                    {% if page.logo %}
+                        <img class="sponsor--logo" src="{{ site.url }}/img/logos/{{ page.logo }}"/>
+                    {% endif %}
+                </div>
+                {% if page.level == 0 %}
+                    {% set levelName = 'Platinum' %}
+                {% elseif page.level == 1 %}
+                    {% set levelName = 'Gold' %}
+                {% elseif page.level == 2 %}
+                    {% set levelName = 'Silver' %}
+                {% elseif page.level == 3 %}
+                    {% set levelName = 'Bronze' %}
+                {% else %}
+                    {% set levelName = 'Community' %}
+                {% endif %}
+
+                {% if page.name != 'Sponsorship Available!' %}
+                    <p class="sponsor-level--title"><span data-level="{{ levelName | lower }}">{{ levelName }}</span> sponsor: {{ page.name }}</p>
+                {% else %}
+                    <h1>{{ levelName }} sponsorships still available!</h1>
+                {% endif %}
+            </header>
+
+            <div class="sponsor-content entry-content">
+                {% block content_wrapper %}
+                    {% block content %}{% endblock %}
+                {% endblock %}
+            </div>
+
+            {% if page.website or page.facebook or page.twitter or page.linkedin or page.youtube %}
+                <footer class="sponsor-page-footer">
+                    <div class="sponsor-page-links">
+                        <h4 class="sponsor-page-links--title">Sponsor links</h4>
+                        <ul class="sponsor-page-links--list">
+                            {% if page.website %}
+                                <li><a href="{{ page.website }}" title="{{ page.name }} website">Website</a></li>
+                            {% endif %}
+
+                            {% if page.facebook %}
+                                <li><a href="{{ page.facebook }}" title="{{ page.name }} on Facebook">Facebook</a></li>
+                            {% endif %}
+
+                            {% if page.twitter %}
+                                <li><a href="{{ page.twitter }}" title="{{ page.name }} on Twitter">Twitter</a></li>
+                            {% endif %}
+
+                            {% if page.linkedin %}
+                                <li><a href="{{ page.linkedin }}" title="{{ page.name }} on LinkedIn">LinkedIn</a></li>
+                            {% endif %}
+
+                            {% if page.youtube %}
+                                <li><a href="{{ page.youtube }}" title="{{ page.name }} on Youtube">YouTube</a></li>
+                            {% endif %}
+                        </ul>
+                    </div>
+                </footer>
+            {% endif %}
+        </article>
+
+        {% include 'sponsors-block' %}
+    </main>
+
+    {% include 'footer' %}
+
+</div>{# .wrapper #}
+
+<div class="mobile-nav-menu"></div>{# placeholder for mobile nav #}
+
+{% include 'footer_scripts' %}
+</body>
+</html>

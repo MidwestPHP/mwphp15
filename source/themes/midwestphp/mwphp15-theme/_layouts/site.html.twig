@@ -2,36 +2,18 @@
 <html>
     {% include 'head_tag' %}
 
-    <body class="no-js">
+    <body class="no-js default-page">
         <div class="wrapper">
             <header class="masthead" role="banner">
-                <div class="navbar">
-                    <div class="inner-wrapper">
-                        <div class="logo">
-                            <a class="brand" href="{{ site.url }}/">{{ site.title }}</a>
-                        </div>
-
-                        <nav class="primary-nav" role="navigation">
-                            <div class="menu-toggle"></div>
-                            <ul class="menu">
-                                <li><a href="{{ site.url }}/speakers">Speakers</a></li>
-                                <li><a href="{{ site.url }}/sessions">Sessions</a></li>
-                                <li><a href="{{ site.url }}/schedule">Schedule</a></li>
-                                <li><a href="{{ site.url }}/sponsors">Sponsors</a></li>
-                                <li><a href="{{ site.url }}/venue">Venue</a></li>
-                                <li><a href="{{ site.url }}/about">About</a></li>
-                                <li><a href="{{ site.url }}/contact">Contact</a></li>
-                                <li class="register"><a href="{{ site.url }}/register">Register</a></li>
-                            </ul>
-                        </nav>{# .primary-nav #}
-                    </div>
-                </div>
+                {% include 'nav-bar' %}
             </header>{# .masthead #}
 
             <main class="main-content inner-wrapper{% if page.hasSidebar %} with-sidebar{% endif %}">
                 <article class="page-content">
                     <h1>{{ page.title }}</h1>
-                    {% block content_wrapper %}{% block content %}{% endblock %}{% endblock %}
+                    {% block content_wrapper %}
+                        {% block content %}{% endblock %}
+                    {% endblock %}
                 </article>
 
                 {% if page.hasSidebar %}

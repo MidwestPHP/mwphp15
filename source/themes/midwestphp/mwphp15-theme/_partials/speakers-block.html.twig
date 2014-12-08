@@ -1,0 +1,23 @@
+{% if data.speakers %}
+    <section class="speakers">
+
+        {% if page.title != 'Speakers' %}
+            <h2 class="speakers--heading">Midwest PHP 2015 speakers</h2>
+        {% endif %}
+
+        {% for speaker in data.speakers %}
+            <article class="speaker">
+                <header>
+                    <h1 class="speaker--name">{{ speaker.firstname }} {{ speaker.lastname }}</h1>
+                </header>
+
+                <div class="speaker-description">
+
+                </div>
+            </article>
+
+        {% endfor %}
+
+    </section><!-- .speakers -->
+
+{% endif %}

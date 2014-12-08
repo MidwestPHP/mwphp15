@@ -177,34 +177,110 @@
   max-width: 400px;
 }
 
-.sponsor-page-links {
+.sponsor-page-footer {}
 
+.sponsor-page-links {}
+
+.sponsor-page-links--title {}
+
+
+/* Speakers */
+.speakers {
+  text-align: center;
 }
+.speaker {
+  box-sizing: content-box;
+  color: $color-text-dark;
+  display: inline-block;
+  margin: 0 -4px 2em 0;
+  text-align: center;
+  min-width: 250px;
+  width: 33%;
 
-.sponsor-page-links--title {
-  font-style: italic;
-  font-weight: 400;
-  margin-bottom: 0.5em;
-}
+  &:hover {
+    background: $color-gray-lightest;
+    box-shadow: 5px 5px 5px $color-gray-medium;
+    @include transition(all 400ms);
+  }
 
-.sponsor-page-links--list {
-  li {
-    border-left: 2px solid $color-background-primary-dark;
-    display: inline-block;
-    margin: 0 0.5em 0.5em 0;
-    padding-left: 0.6em;
+  a {
+    color: inherit;
+    display: block;
+  }
 
-    &:first-child {
-      border-left: none;
-      padding-left: 0;
+  h1 {
+    .default-page & {
+      font-size: 1.25em;
+      text-transform: none;
     }
   }
 }
 
-.sponsor-page-footer {
-  background: $color-gray-lightest;
-  padding: 0.5em 1em;
+.speaker--image {
+  max-height: 250px;
+  margin: 1em auto;
+  max-width: 90%;
+  overflow: hidden;
+  width: 250px;
+
+  .speaker-article &,
+  .talk-article & {
+    margin: 0 2em 1em 0;
+    float: left;
+  }
 }
+
+.speaker--selected-talks {
+  background: $color-background-primary-dark;
+  clear: both;
+  padding: 1em;
+
+  h3 {
+    color: $color-background-lightest;
+    font-weight: 400;
+    letter-spacing: 0.06em;
+    margin-bottom: 0.5em;
+  }
+
+  a {
+    color: $color-background-lightest;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  li {
+    line-height: 1.4em;
+  }
+}
+
+.speaker-page-links {}
+
+/* Talks */
+.talk-article {
+  overflow: hidden;
+
+  &::after {
+    clear: both;
+    content: '';
+    display: table;
+    width: 100%;
+  }
+}
+
+.talks-list {
+  li {
+    .default-page & {
+      font-size: 1.5em;
+      line-height: 1.6em;
+    }
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+}
+
 
 @media screen and (max-width: 60em) {
   .inner-wrapper {

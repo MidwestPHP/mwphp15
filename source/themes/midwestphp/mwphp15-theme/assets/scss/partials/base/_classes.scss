@@ -8,6 +8,32 @@
   cursor: pointer;
 }
 
+/* Custom post types */
+[class*="-page-footer"] {
+  background: $color-gray-lightest;
+  padding: 0.5em 1em;
+}
+
+[class*="-page-links--title"] {
+  font-style: italic;
+  font-weight: 400;
+  margin-bottom: 0.5em;
+}
+
+[class*="-page-links--list"] {
+  li {
+    border-left: 2px solid $color-background-primary-dark;
+    display: inline-block;
+    margin: 0 0.5em 0.5em 0;
+    padding-left: 0.6em;
+
+    &:first-child {
+      border-left: none;
+      padding-left: 0;
+    }
+  }
+}
+
 .hidden {
   display: none;
 }

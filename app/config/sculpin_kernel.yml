@@ -5,5 +5,7 @@ sculpin_content_types:
       permalink: sponsors/:slug_title
     speakers:
       permalink: speakers/:slug_title
+    talks:
+      permalink: talks/:slug_title
 sculpin_theme:
     theme: midwestphp/mwphp15-theme

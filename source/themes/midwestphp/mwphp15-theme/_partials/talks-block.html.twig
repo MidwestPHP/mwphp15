@@ -1,0 +1,13 @@
+{% if page.layout == 'speaker' %}
+    <ul class="talks-list">
+        {% for talk in data.talks if talk.speakerlastname | lower == page.lastname | lower %}
+            <li><a href="{{ talk.url }}" title="{{ talk.title }}">{{ talk.title }}</a></li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <ul class="talks-list">
+        {% for talk in data.talks %}
+            <li><a href="{{ talk.url }}" title="{{ talk.title }}">{{ talk.title }}</a></li>
+        {% endfor %}
+    </ul>
+{% endif %}

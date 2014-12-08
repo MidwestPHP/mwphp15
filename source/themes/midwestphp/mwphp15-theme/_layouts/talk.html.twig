@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+{% include 'head_tag' %}
+
+{# Get data for speaker #}
+{% set speakerName = '' %}
+{% set speakerUrl = '' %}
+{% set speakerImage = '' %}
+
+{% for speaker in data.speakers %}
+    {% if speaker.lastname | lower == page.speakerlastname | lower %}
+        {% set speakerName %}
+            {{ speaker.firstname }} {{ speaker.lastname }}
+        {% endset %}
+
+        {% set speakerUrl = speaker.url %}
+        {% set speakerImage = speaker.image %}
+    {% endif %}
+{% endfor %}
+
+<body class="talk-page no-js">
+<div class="wrapper">
+    <header class="masthead" role="banner">
+        {% include 'nav-bar' %}
+    </header>{# .masthead #}
+
+    <main class="main-content inner-wrapper{% if page.hasSidebar %} with-sidebar{% endif %}">
+        <article class="talk-article page-content">
+            <header class="talk-page-header">
+                <h1>{{ page.title }} - <a href="{{ speakerUrl }}" title="{{ speakerName }}">{{ speakerName }}</a></h1>
+
+                <div class="speaker--image">
+                    {% if speakerImage %}
+                        <img src="{{ site.url }}/img/speakers/{{ speakerImage }}"
+                             alt="{{ speakerName }}"/>
+                    {% endif %}
+                </div>
+                <!-- .talk--image -->
+            </header>
+
+            <div class="talk-content entry-content">
+                {% block content_wrapper %}
+                    {% block content %}{% endblock %}
+                {% endblock %}
+            </div>
+        </article>
+    </main>
+
+    {% include 'footer' %}
+
+</div>{# .wrapper #}
+
+<div class="mobile-nav-menu"></div>{# placeholder for mobile nav #}
+
+{% include 'footer_scripts' %}
+</body>
+</html>

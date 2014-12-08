@@ -2,4 +2,10 @@ services:
   sculpin_content_types.types.sponsors.collection.sorter:
     class: Sculpin\Contrib\ProxySourceCollection\Sorter\MetaSorter
     arguments:
-      - level
+      - name
+      - DESC
+  sculpin_content_types.types.speakers.collection.sorter:
+    class: Sculpin\Contrib\ProxySourceCollection\Sorter\MetaSorter
+    arguments:
+      - lastname
+      - DESC

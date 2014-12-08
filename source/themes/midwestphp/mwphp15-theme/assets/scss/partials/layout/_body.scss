@@ -56,16 +56,12 @@
   }
 }
 
-.sponsor-page {
-
-}
-
 .sponsor-article {
   margin-bottom: 3em;
 }
 
 .sponsors {
-  border-top: 1px solid $color-background-primary-light;
+  border-top: 1px solid #b4b4b4;
   padding-top: 4em;
   text-align: center;
 }
@@ -94,11 +90,13 @@
   text-align: center;
   width: 260px;
 
-  @include transition(all 0.3s);
+  @include transition(all 0.5s);
   vertical-align: top;
 
   &:hover {
-    background: lighten($color-background-primary-light, 20%);
+    border-top: 5px solid;
+    border-bottom: none;
+    box-shadow: 5px 5px 5px $color-gray-light;
     @include transition(all 0.3s);
   }
 
@@ -141,6 +139,71 @@
 
 .sponsor--logo + .sponsor--heading {
   display: none;
+}
+
+/* Sponsor - single page */
+.sponsor-page-header {}
+
+.sponsor-level--title {
+  margin-bottom: 0.5em;
+
+  span {
+    font-weight: 400;
+
+    &[data-level="platinum"] {
+      color: rgb(180,180,120);
+    }
+
+    &[data-level="gold"] {
+      color: #ffd700;
+    }
+
+    &[data-level="silver"] {
+      color: silver;
+    }
+
+    &[data-level="bronze"] {
+      color: #cd7f32;
+    }
+
+    &[data-level="community"] {
+      color: black;
+    }
+  }
+}
+
+.sponsor-page--logo {
+  margin-bottom: 1em;
+  max-width: 400px;
+}
+
+.sponsor-page-links {
+
+}
+
+.sponsor-page-links--title {
+  font-style: italic;
+  font-weight: 400;
+  margin-bottom: 0.5em;
+}
+
+.sponsor-page-links--list {
+  li {
+    border-left: 2px solid $color-background-primary-dark;
+    display: inline-block;
+    margin: 0 0.5em 0.5em 0;
+    padding-left: 0.6em;
+
+    &:first-child {
+      border-left: none;
+      padding-left: 0;
+    }
+  }
+}
+
+.sponsor-page-footer {
+  background: $color-gray-lightest;
+  padding: 0.5em 1em;
 }
 
 @media screen and (max-width: 60em) {

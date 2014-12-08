@@ -1,6 +1,6 @@
 {% if data.sponsors %}
+    {% set sponsorshipLevels = { 0: 'platinum', 1: 'gold', 2: 'silver', 3: 'bronze', 4: 'community' } %}
     {% set levelName =  '' %}
-    {% set currentLevel = levelName %}
 
     <article class="sponsors">
 
@@ -8,44 +8,25 @@
             <h2 class="sponsors--heading">Midwest PHP 2015 Sponsors</h2>
         {% endif %}
 
-        {% for sponsor in data.sponsors %}
-            {# Get the current level #}
-            {% if sponsor.level == 0 %}
-                {% set levelName = 'platinum' %}
-            {% elseif sponsor.level == 1 %}
-                {% set levelName = 'gold' %}
-            {% elseif sponsor.level == 2 %}
-                {% set levelName = 'silver' %}
-            {% elseif sponsor.level == 3 %}
-                {% set levelName = 'bronze' %}
-            {% else %}
-                {% set levelName = 'community' %}
-            {% endif %}
+        {% for level, levelName in sponsorshipLevels %}
+            <section class="sponsors--wrap">
+                <h3 class="sponsors--wrap-heading">{{ levelName | title }}</h3>
 
-            {# Output sponsors in sections by level #}
-            {% if loop.first or levelName != currentLevel %}
-                {% if levelName != currentLevel %}
-                    </section><!-- .sponsors--wrap -->
-                    {% set currentLevel = levelName %}
-                {% endif %}
-                <section class="sponsors--wrap">
-                    <h3 class="sponsors--wrap-heading">{{ levelName | title }}</h3>
-            {% endif %}
-
-            <div class="sponsor" data-level="{{ levelName }}">
-                <a class="sponsor--link" href="{{ sponsor.url }}">
-                    <div class="sponsor--info">
-                        {% if sponsor.logo %}
-                            <img class="sponsor--logo" src="{{ site.url }}/img/logos/{{ sponsor.logo }}"/>
-                        {% endif %}
-                        <h3 class="sponsor--heading">{{ sponsor.name }}</h3>
-                    </div>
-                </a>
-            </div>
-
-            {% if loop.last %}
-                </section><!-- .sponsors--wrap -->
-            {% endif %}
+                {% for sponsor in data.sponsors %}
+                    {% if sponsor.level == level %}
+                        <div class="sponsor" data-level="{{ levelName }}">
+                            <a class="sponsor--link" href="{{ sponsor.url }}">
+                                <div class="sponsor--info">
+                                    {% if sponsor.logo %}
+                                        <img class="sponsor--logo" src="{{ site.url }}/img/logos/{{ sponsor.logo }}"/>
+                                    {% endif %}
+                                    <h3 class="sponsor--heading">{{ sponsor.name }}</h3>
+                                </div>
+                            </a>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </section><!-- .sponsors--wrap -->
         {% endfor %}
 
     </article><!-- .sponsors -->

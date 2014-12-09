@@ -8,13 +8,7 @@ use: [sponsors]
     community to learn about modern web development practices across a range of technologies, including PHP,
     JavaScript, HTML, CSS, and more.</p>
 
-{% if site.template == 'splash' %}
-
-    <p>Save the date! The Midwest PHP Conference returns to the University of St. Thomas Downtown Minneapolis campus on
-        March 14 &amp; 15, 2015. Now in its third year, the conference will bring together developers from across the
-        PHP community to learn about modern web development practices across a range of technologies, including PHP,
-        JavaScript, HTML, CSS, and more.</p>
-{% else %}
+{% if site.template != 'splash' %}
     {% include 'sponsors-block' %}
 {% endif %}
 

@@ -8,7 +8,7 @@ use: [sponsors]
     community to learn about modern web development practices across a range of technologies, including PHP,
     JavaScript, HTML, CSS, and more.</p>
 
-{% if site.template == 'splash' %}
+{% if site.template != 'splash' %}
     {% include 'sponsors-block' %}
 {% endif %}
 

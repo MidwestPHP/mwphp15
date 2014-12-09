@@ -274,13 +274,22 @@
 .talks-list {
   li {
     .default-page & {
+      border-top: 1px solid $color-gray-medium;
       font-size: 1.5em;
-      line-height: 1.6em;
+      line-height: 1.4em;
+      padding: 0.4em 0;
+      &:first-child {
+        border-top: none;
+      }
     }
   }
 
+  a {
+    letter-spacing: 0.05em;
+  }
   a:hover {
-    text-decoration: underline;
+    font-weight: 400;
+    letter-spacing: 0.038em;
   }
 }
 

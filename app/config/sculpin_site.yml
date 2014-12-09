@@ -3,6 +3,5 @@
 # in a template to get the contents of the `title` key.
 title: Midwest PHP
 description: March 14-15, 2015 | St. Thomas University, Minneapolis, MN
-url: http://2015.midwestphp.org
 google_analytics_tracking_id: UA-99895-9
-template: splash
+template: site

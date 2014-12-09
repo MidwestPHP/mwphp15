@@ -126,7 +126,7 @@
   }
 }
 
-@media screen and (max-width: 51.25em) {
+@media screen and (max-width: 960px) {
   .primary-nav {
     margin-left: 9em;
 
@@ -145,7 +145,7 @@
   }
 }
 
-@media screen and (max-width: 47.5em) {
+@media screen and (max-width: 760px) {
   .js {
     .primary-nav {
       display: inline-block;
@@ -172,17 +172,23 @@
     }
 
     .mobile-nav-menu {
-      background: $color-background-primary-light;
+      bottom: 0;
       display: block;
-      overflow: hidden;
-      padding: 2.5em 0;
+//      overflow: hidden;
+      margin: auto;
       position: absolute;
       right: 0;
       top: 0;
       z-index: 0;
 
       .menu {
+        background: $color-background-primary-light;
+        bottom: 0;
+        left: 0;
         position: relative;
+        right: 0;
+        top: 0;
+        z-index: 0;
 
         a {
           color: $color-text-light;

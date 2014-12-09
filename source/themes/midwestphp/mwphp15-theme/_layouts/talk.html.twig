@@ -29,12 +29,11 @@
             <header class="talk-page-header">
                 <h1>{{ page.title }} - <a href="{{ speakerUrl }}" title="{{ speakerName }}">{{ speakerName }}</a></h1>
 
-                <div class="speaker--image">
-                    {% if speakerImage %}
-                        <img src="{{ site.url }}/img/speakers/{{ speakerImage }}"
-                             alt="{{ speakerName }}"/>
-                    {% endif %}
-                </div>
+                {% if speakerImage %}
+                    <div class="speaker--image">
+                        <img src="{{ site.url }}/img/speakers/{{ speakerImage }}" alt="{{ speakerName }}"/>
+                    </div>
+                {% endif %}
                 <!-- .talk--image -->
             </header>
 

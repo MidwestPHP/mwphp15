@@ -6,12 +6,17 @@
   box-sizing: border-box;
 }
 
+html {
+  background: $color-background-primary-light;
+}
+
 body {
   background: $color-background-lightest;
   color: $color-text-dark;
   font-family: $sans;
   font-size: $size-font-base;
   font-weight: 300;
+  min-height: 100%;
   position: relative;
   z-index: 1;
 }

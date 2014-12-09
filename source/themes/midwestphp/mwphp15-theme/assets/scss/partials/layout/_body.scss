@@ -7,6 +7,9 @@
   position: absolute;
   right: 0;
   z-index: 1;
+  &.open {
+    box-shadow: 2px 2px 3px lighten($color-background-primary-dark, 10%);
+  }
 }
 
 .inner-wrapper {
@@ -282,14 +285,20 @@
 }
 
 
-@media screen and (max-width: 60em) {
+@media screen and (max-width: 960px) {
   .inner-wrapper {
     width: 95%;
   }
 }
 
-@media screen and (max-width: 47.5em) {
+@media screen and (max-width: 760px) {
   .main-content {
+    padding-left: 0;
+
+    &.inner-wrapper {
+      width: 90%;
+    }
+
     &.with-sidebar {
        padding-right: 1em;
 
@@ -297,6 +306,15 @@
         margin-bottom: 1em;
         width: 100%;
       }
+    }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .speaker--image {
+    .speaker-article &,
+    .talk-article & {
+      float: none;
     }
   }
 }

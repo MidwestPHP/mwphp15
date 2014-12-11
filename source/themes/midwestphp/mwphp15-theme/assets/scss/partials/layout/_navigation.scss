@@ -172,13 +172,16 @@
     }
 
     .mobile-nav-menu {
-      display: block;
-//      overflow: hidden;
+      display: none;
       margin: auto;
       position: fixed;
       right: 0;
       top: 0;
       z-index: 0;
+
+      &.open {
+        display: block;
+      }
 
       .menu {
         background: $color-background-primary-light;

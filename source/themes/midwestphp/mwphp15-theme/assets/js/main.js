@@ -20,9 +20,11 @@ function toggleNav() {
         // Show and hide navigation
         if (pageWrapper.hasClass('open')) {
             pageWrapper.removeClass('open').animate({left: '0', right: '0'}, menuSpeed);
+            mobileNavMenu.removeClass('open');
         } else {
             navWidth = mobileNavMenu.width();
             pageWrapper.addClass('open').animate({left: '-'+navWidth+'px', right: navWidth+'px'}, menuSpeed);
+            mobileNavMenu.addClass('open');
         }
     });
 }

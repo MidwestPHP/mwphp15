@@ -9,18 +9,36 @@
         {% endif %}
 
         {% for level, levelName in sponsorshipLevels %}
+            {% set sponsorPostTitle = '' %}
+            {% set sponsorPostUrl = '' %}
+
             <section class="sponsors--wrap">
                 <h3 class="sponsors--wrap-heading">{{ levelName | title }}</h3>
 
                 {% for sponsor in data.sponsors %}
                     {% if sponsor.level == level %}
+                        {% if sponsor.name starts with 'Sponsorship' %}
+                            {% set sponsorPostTitle = sponsor.name %}
+                            {% set sponsorPostUrl = sponsor.url %}
+                        {% else %}
+                            <div class="sponsor" data-level="{{ levelName }}">
+                                <a class="sponsor--link" href="{{ sponsor.url }}">
+                                    <div class="sponsor--info">
+                                        {% if sponsor.logo %}
+                                            <img class="sponsor--logo" src="{{ site.url }}/img/logos/{{ sponsor.logo }}"/>
+                                        {% endif %}
+                                        <h3 class="sponsor--heading">{{ sponsor.name }}</h3>
+                                    </div>
+                                </a>
+                            </div>
+                        {% endif %}
+                    {% endif %}
+
+                    {% if loop.last %}
                         <div class="sponsor" data-level="{{ levelName }}">
-                            <a class="sponsor--link" href="{{ sponsor.url }}">
+                            <a class="sponsor--link" href="{{ sponsorPostUrl }}">
                                 <div class="sponsor--info">
-                                    {% if sponsor.logo %}
-                                        <img class="sponsor--logo" src="{{ site.url }}/img/logos/{{ sponsor.logo }}"/>
-                                    {% endif %}
-                                    <h3 class="sponsor--heading">{{ sponsor.name }}</h3>
+                                    <h3 class="sponsor--heading">{{ sponsorPostTitle }}</h3>
                                 </div>
                             </a>
                         </div>

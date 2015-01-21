@@ -1,7 +1,16 @@
 {% if page.layout == 'speaker' %}
     <ul class="talks-list">
-        {% for talk in data.talks if talk.speakerlastname | lower == page.lastname | lower %}
-            <li><a href="{{ talk.url }}" title="{{ talk.title }}">{{ talk.title }}</a></li>
+        {% for talk in data.talks %}
+            {% if talk.speakerlastname is iterable %}
+                {% if page.lastname in talk.speakerlastname%}
+                    <li><a href="{{ talk.url }}" title="{{ talk.title }}">{{ talk.title }}</a></li>
+                {% endif %}
+            {% else %}
+                {% if talk.speakerlastname | lower == page.lastname | lower %}
+                    <li><a href="{{ talk.url }}" title="{{ talk.title }}">{{ talk.title }}</a></li>
+                {% endif %}
+            {% endif %}
+
         {% endfor %}
     </ul>
 {% else %}

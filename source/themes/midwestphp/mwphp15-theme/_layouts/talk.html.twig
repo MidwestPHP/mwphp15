@@ -7,7 +7,8 @@
 {% set speakerUrl = '' %}
 {% set speakerImage = '' %}
 
-{% for speaker in data.speakers %}
+{% if page.speakerlastname is not iterable %}
+    {% for speaker in data.speakers %}
     {% if speaker.lastname | lower == page.speakerlastname | lower %}
         {% set speakerName %}
             {{ speaker.firstname }} {{ speaker.lastname }}
@@ -17,6 +18,7 @@
         {% set speakerImage = speaker.image %}
     {% endif %}
 {% endfor %}
+{% endif %}
 
 <body class="talk-page no-js">
 <div class="wrapper">
@@ -27,7 +29,7 @@
     <main class="main-content inner-wrapper{% if page.hasSidebar %} with-sidebar{% endif %}">
         <article class="talk-article page-content">
             <header class="talk-page-header">
-                <h1>{{ page.title }} - <a href="{{ speakerUrl }}" title="{{ speakerName }}">{{ speakerName }}</a></h1>
+                <h1>{{ page.title }} {% if speakerName.length > 0 %}- <a href="{{ speakerUrl }}" title="{{ speakerName }}">{{ speakerName }}</a>{% endif %}</h1>
 
                 {% if speakerImage %}
                     <div class="speaker--image">

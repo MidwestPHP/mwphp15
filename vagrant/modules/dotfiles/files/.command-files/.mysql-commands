@@ -1,7 +1,0 @@
-#!/bin/sh
-
-alias redb='mysql -u root -proot $PROJECT_DATABASE -e "SET unique_checks=0; SET foreign_key_checks=0; SET autocommit=0; source /var/www/current-data-dump.sql; COMMIT; SET foreign_key_checks=1; SET unique_checks=1;"'
-alias savedb='DATE=$(date +%Y_%m_%d-%H_%M_%S) && mysqldump -u root -proot $PROJECT_DATABASE > /var/www/${DATE}-data-dump.sql'
-
-command_notation 'redb' 'Reload the mysqldb to the state of /var/www/current-data-dump.sql'
-command_notation 'savedb' "Export a copy of the current $PROJECT_DATABASE db"

@@ -1,5 +1,5 @@
 {% if data.sponsors %}
-    {% set sponsorshipLevels = { 0: 'platinum', 1: 'gold', 2: 'silver', 3: 'bronze', 4: 'community' } %}
+    {% set sponsorshipLevels = { 0: 'platinum', 1: 'gold', 2: 'silver', 3: 'bronze', 4: 'community', 5: 'lanyard', 6: 'lunch'} %}
     {% set levelName =  '' %}
 
     <article class="sponsors">
@@ -32,16 +32,6 @@
                                 </a>
                             </div>
                         {% endif %}
-                    {% endif %}
-
-                    {% if loop.last %}
-                        <div class="sponsor" data-level="{{ levelName }}">
-                            <a class="sponsor--link" href="{{ sponsorPostUrl }}">
-                                <div class="sponsor--info">
-                                    <h3 class="sponsor--heading">{{ sponsorPostTitle }}</h3>
-                                </div>
-                            </a>
-                        </div>
                     {% endif %}
                 {% endfor %}
             </section><!-- .sponsors--wrap -->

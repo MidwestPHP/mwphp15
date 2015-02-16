@@ -25,6 +25,10 @@
                     {% set levelName = 'Silver' %}
                 {% elseif page.level == 3 %}
                     {% set levelName = 'Bronze' %}
+                {% elseif page.level == 5 %}
+                    {% set levelName = 'Lanyard' %}
+                {% elseif page.level == 6 %}
+                    {% set levelName = 'Lunch' %}
                 {% else %}
                     {% set levelName = 'Community' %}
                 {% endif %}
@@ -61,6 +65,10 @@
 
                             {% if page.linkedin %}
                                 <li><a href="{{ page.linkedin }}" title="{{ page.name }} on LinkedIn">LinkedIn</a></li>
+                            {% endif %}
+
+                            {% if page.googleplus %}
+                                <li><a href="{{ page.googleplus }}" title="{{ page.name }} on Google+">Google+</a></li>
                             {% endif %}
 
                             {% if page.youtube %}

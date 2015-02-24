@@ -1,6 +1,8 @@
 sculpin:
     permalink: pretty
 sculpin_content_types:
+    posts:
+      enabled: false
     sponsors:
       permalink: sponsors/:slug_title/
     speakers:

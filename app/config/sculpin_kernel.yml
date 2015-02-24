@@ -2,10 +2,10 @@ sculpin:
     permalink: pretty
 sculpin_content_types:
     sponsors:
-      permalink: sponsors/:slug_title
+      permalink: sponsors/:slug_title/
     speakers:
-      permalink: speakers/:slug_title
+      permalink: speakers/:slug_title/
     talks:
-      permalink: talks/:slug_title
+      permalink: talks/:slug_title/
 sculpin_theme:
     theme: midwestphp/mwphp15-theme
